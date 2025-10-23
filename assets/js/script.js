@@ -28,6 +28,11 @@ let n = 0;
 while (n < numbers.length){
     const btn = document.createElement("button")
     btn.textContent = [numbers[n]]
+    btn.addEventListener("click", () =>{
+        document.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+        btn.classList.add("active")
+        console.log(btn);
+    })
     notes.append(btn);
     // console.log(n);
     // console.log(btn);  
@@ -39,3 +44,4 @@ container.append(submit);
 const submitBtn = document.createElement("button");
 submitBtn.textContent = "SUBMIT";
 submit.append(submitBtn);
+

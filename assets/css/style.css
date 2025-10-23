@@ -63,13 +63,13 @@ h1, #submit button{
     align-self: center;
 }
 #notes button:hover{
-   background-color: grey;
    color: white;
    cursor: pointer;
+   background-color:hsl(25, 97%, 53%);
 }
-#notes button:active{
+#notes button.active{
     color: white;
-    background-color:hsl(25, 97%, 53%);
+    background-color: grey;
 }
 #star{
     padding: .8rem;
