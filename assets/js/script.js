@@ -32,4 +32,10 @@ while (n < numbers.length){
     // console.log(n);
     // console.log(btn);  
     n++
-}
+};
+const submit = document.createElement("div");
+submit.id ="submit";
+container.append(submit)
+const submitBtn = document.createElement("button");
+submitBtn.textContent = "SUBMIT"
+submit.append(submitBtn)
