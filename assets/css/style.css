@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Overpass";
+    src: url("../fonts/Overpass-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass";
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
