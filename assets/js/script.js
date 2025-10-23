@@ -18,7 +18,7 @@ const notes = document.createElement("div");
 notes.id = "notes";
 container.append(notes);
 const numbers = [1,2,3,4,5];
-let n = 0
+let n = 0;
 // numbers.forEach(value => {
 //     const btn = document.createElement("button");
 //     btn.textContent = [numbers[n]];
@@ -35,7 +35,7 @@ while (n < numbers.length){
 };
 const submit = document.createElement("div");
 submit.id ="submit";
-container.append(submit)
+container.append(submit);
 const submitBtn = document.createElement("button");
-submitBtn.textContent = "SUBMIT"
-submit.append(submitBtn)
+submitBtn.textContent = "SUBMIT";
+submit.append(submitBtn);
