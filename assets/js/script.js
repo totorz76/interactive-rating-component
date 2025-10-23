@@ -5,6 +5,9 @@ container.append(star);
 const img = document.createElement("img");
 img.src = "./assets/images/icon-star.svg";
 star.append(img);
+const choice = document.createElement("div");
+choice.id = "choice";
+container.append(choice);
 const txt = document.createElement("div");
 txt.id = "txt";
 container.append(txt);
@@ -25,6 +28,7 @@ let n = 0;
 //     notes.append(btn);
 //     n++
 // });
+// boucle de création des boutons de notes
 while (n < numbers.length) {
     const btn = document.createElement("button")
     btn.textContent = [numbers[n]]
@@ -46,6 +50,7 @@ while (n < numbers.length) {
     // console.log(btn);  
     n++
 };
+// Submit button
 const submit = document.createElement("div");
 submit.id = "submit";
 container.append(submit);
@@ -58,8 +63,23 @@ submitBtn.addEventListener("mouseover", () => {
 submitBtn.addEventListener("mouseleave", () => {
     submitBtn.classList.remove("hover")
     console.log(submitBtn);
-}) 
-submitBtn.addEventListener("click", ()=>{
-
+})
+// Afficher la page Thank You
+submitBtn.addEventListener("click", () => {
+    container.style.alignItems = "center";
+    container.style.textAlign = "center";
+    star.id = "thankYou";
+    img.src = "./assets/images/illustration-thank-you.svg";
+    choice.textContent = `You selected ${document.querySelector(".active").textContent} out of 5`;
+    choice.style.borderRadius = "1.5rem";
+    choice.style.padding = "0.7rem 1rem .5rem 1rem";
+    choice.style.color = "hsl(25, 97%, 53%)";
+    choice.style.backgroundColor = "hsl(216, 18%, 22%)";
+    choice.style.backgroundColor = "300";
+    choice.style.marginTop = "2rem";
+    titre.textContent = "Thank You!";
+    info.textContent = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!";
+    notes.style.display = "none"
+    submit.style.display = "none"
 })
 submit.append(submitBtn);

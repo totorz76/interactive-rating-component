@@ -89,6 +89,9 @@ h1,
     align-items: center;
     justify-content: center;
 }
+#thankYou{
+    display: block; 
+}
 #star img {
     width: 1rem;
 }
