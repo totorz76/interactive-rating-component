@@ -1,5 +1,5 @@
 const container = document.getElementById("container");
-const star = document.createElement ("div");
+const star = document.createElement("div");
 star.id = "star";
 container.append(star);
 const img = document.createElement("img");
@@ -17,7 +17,7 @@ txt.append(info);
 const notes = document.createElement("div");
 notes.id = "notes";
 container.append(notes);
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 let n = 0;
 // numbers.forEach(value => {
 //     const btn = document.createElement("button");
@@ -25,10 +25,18 @@ let n = 0;
 //     notes.append(btn);
 //     n++
 // });
-while (n < numbers.length){
+while (n < numbers.length) {
     const btn = document.createElement("button")
     btn.textContent = [numbers[n]]
-    btn.addEventListener("click", () =>{
+    btn.addEventListener("mouseover", () => {
+        btn.classList.add("hover")
+        console.log(btn);
+    })
+    btn.addEventListener("mouseleave", () => {
+        btn.classList.remove("hover")
+        console.log(btn);
+    })
+    btn.addEventListener("click", () => {
         document.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
         btn.classList.add("active")
         console.log(btn);
@@ -39,9 +47,19 @@ while (n < numbers.length){
     n++
 };
 const submit = document.createElement("div");
-submit.id ="submit";
+submit.id = "submit";
 container.append(submit);
 const submitBtn = document.createElement("button");
 submitBtn.textContent = "SUBMIT";
-submit.append(submitBtn);
+submitBtn.addEventListener("mouseover", () => {
+    submitBtn.classList.add("hover")
+    console.log(submitBtn);
+})
+submitBtn.addEventListener("mouseleave", () => {
+    submitBtn.classList.remove("hover")
+    console.log(submitBtn);
+}) 
+submitBtn.addEventListener("click", ()=>{
 
+})
+submit.append(submitBtn);
